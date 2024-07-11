@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Storage Example</title>
+    <script>
+        // Function to store data in localStorage
+        function storeData() {
+            localStorage.setItem('key', 'This is a test value stored in localStorage.');
+            alert('Data stored in localStorage.');
+        }
+
+        // Function to retrieve and display data from localStorage
+        function displayData() {
+            const value = localStorage.getItem('key');
+            if (value) {
+                alert('Stored Value: ' + value);
+            } else {
+                alert('No data found in localStorage.');
+            }
+        }
+
+        // Store data on page load
+        window.onload = function() {
+            storeData();
+        };
+    </script>
+</head>
+<body>
+    <h1>DOM Storage Example</h1>
+    <p>This page stores a value in localStorage on load and retrieves it when you click the button below.</p>
+    <button onclick="displayData()">Display Stored Data</button>
+</body>
+</html>
